@@ -1,0 +1,67 @@
+             body{
+        background-color:#f4f4f4;
+        font-family:Tahoma;
+        }
+        h3{
+        text-align:center;
+        padding:20px
+        }
+
+        form{
+        text-align: center;
+        padding-right:20px
+        }
+        form textarea{
+        padding:20px;
+        width:50%;
+        height:300px
+        }
+        .button-primary{
+        background-color:#2e5898;
+        color:#fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 100px;
+        }
+        form input[type ="reset"]{
+        background-color:#333;
+        color:#fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius:100px;
+        }
+        .box-1{
+        border:2px solid #ccc;
+        padding:10px;
+        margin:10px;
+        text-align:center;
+        }
+        .message{
+        text-align: center;
+        font-size:15px;
+        }
+
+    .card-body a{
+     background-color: #2e5898;
+     font-size: 15px;
+     color:#fff;
+     text-decoration :none;
+     border: 1px solid #2e5898;
+     margin: 20px 20px;
+     }
+     .card-body li {
+     display:inline;
+     text-align:center;
+     padding:20px;
+     margin:20px;
+     padding-right;15px;
+     }
+        #top-desc{
+        font-size:20px;
+        line-height:32px;
+        margin-top:24px;
+        color:#60657b;
+        text-align: center;
+        width:90;
+        margin-bottom:35px
+        }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="{{url_for('gen')}}" method="POST" id="myForm" autocomplete="on" enctype="multipart/form-data">
+        <div>
+            <textarea name="rawtext" cols="30" rows="10" placeholder="Enter text or upload a file">
+            </textarea>
+        </div>
+        <input type="submit" value="Generate Keyword" class="button-primary">
+        <input type="reset" value="Refresh text" class="button">
+        <input type="file" name="source-file"  class="button" >
+    </form>
+<div class="card-body">
+                 <h3 class="box-1">Generated keywords</h3>
+                {% for value in keyword %}
+                <li>{{value}}
+                    <a href="https://en.wikipedia.org/wiki/{{value}}" target="_blank" type="button" class="btn btn primary">Check</a>
+                </li>
+                {% endfor %}
+            </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+{% extends 'base.html'%}
+
+{% block head%}
+    <style>
+    body {
+    background-color:#f4f4f4;
+    font-family:Tahoma
+         }
+     #main-p{
+     text-align: center;
+     }
+     #main-header h1 {
+     text-align: center;
+     margin-bottom:60px;
+
+     }
+     #main-header h3,h4
+     {
+     text-align: center;
+     font-size:22px;
+     }
+     h4 {
+     text-align: center;
+     font-size:20px;
+     margin-bottom:50px;
+     }
+     h5 {
+     text-align: center;
+     margin-top:100px;
+     }
+     .selection-1 h5 {
+     text-align: center;
+     font-size:22px;
+     font-family:Tahoma
+     }
+
+     .link-btn{
+     text-align: center;
+     }
+      .link-btn a{
+     background-color: #2e5898;
+     font-size: 20px;
+     color:#fff;
+     text-decoration :none;
+     border: 2px solid #2e5898;
+     padding:10px;
+     height:50px;
+     margin: 20px 20px;
+     width:100px;
+     border-radius:100px;
+     }
+     #main-footer{
+      background:#333;
+        color:#fff;
+        text-align:center;
+        padding:5px;
+        margin-top:20%;
+        }
+
+    </style>
+{% endblock%}
+
+
+{% block body %}
+<div class="container">
+    <header id="main-header">
+        <h1 >Key Word Generator</h1>
+        <hr>
+        <h3>
+            This web based application helps you to generate keywords that your reader should look out for in your article or research paper.
+        </h3>
+
+    </header>
+    <section class ="selection-1">
+        <h4>Choose a language to start</h4>
+        <div class="link-btn">
+            <a href="/english">English</a>
+            <a href="/french">French</a>
+        </div>
+    </section>
+    <div>
+            <h5>How it works?</h5>
+            <p id="main-p">The app scans through your text and returns top five words with highest frequency.</p>
+        </div>
+</div>
+
+{% endblock%}

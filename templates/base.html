@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+
+        footer nav{
+        background-color:#333;
+        color:#fff;
+        text-align:center;
+        margin-top:150px;
+
+        }
+        footer nav ul{
+        padding:10px;
+        list-style:none;
+        }
+        footer nav li{
+        display:inline;
+        }
+        footer nav a{
+        color:#fff;
+        text-decoration:none;
+        font-size:18px;
+        padding-right:20px;
+        }
+
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+            </ul>
+          </div>
+    </nav>
+    {% block head%} {% endblock %}
+
+</head>
+<body>
+    {%block body%}
+
+    {% endblock %}
+<footer>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="www.twitter.com/ibromodzi">Twitter</a></li>
+                <li><a href="www.linkedin.com/in/dhikrullah">Linkedin</a></li>
+            </ul>
+        </div>
+    </nav>
+</footer>
+</body>
+</html>
