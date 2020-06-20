@@ -1,0 +1,108 @@
+{% extends 'base.html'%}
+
+{% block head%}
+   <style>
+             body{
+        background-color:#f4f4f4;
+        font-family:Tahoma;
+        }
+        h3{
+        text-align:center;
+        padding:20px
+        }
+
+        form{
+        text-align: center;
+        padding-right:20px
+        }
+        form textarea{
+        padding:20px;
+        width:50%;
+        height:300px
+        }
+        .button-primary{
+        background-color:#2e5898;
+        color:#fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 100px;
+        }
+        form input[type ="reset"]{
+        background-color:#333;
+        color:#fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius:100px;
+        }
+        .box-1{
+        border:2px solid #ccc;
+        padding:10px;
+        margin:10px;
+        text-align:center;
+        }
+        .message{
+        text-align: center;
+        font-size:15px;
+        }
+
+    .card-body a{
+     background-color: #2e5898;
+     font-size: 15px;
+     color:#fff;
+     text-decoration :none;
+     border: 1px solid #2e5898;
+     margin: 20px 20px;
+     }
+     .card-body li {
+     display:inline;
+     text-align:center;
+     padding:20px;
+     margin:20px;
+     padding-right;15px;
+     }
+      #top-desc{
+        font-size:20px;
+        line-height:32px;
+        margin-top:24px;
+        color:#60657b;
+        text-align: center;
+        width:90;
+        margin-bottom:35px
+        }
+    </style>
+{% endblock%}
+
+
+{%block body%}
+    <div id ="top-desc">
+         You can either enter a chunk of text or upload a file to generate keyword.
+    </div>
+    {%if message %}
+    <p class ="message">{{message | safe}}</p>
+    {% endif%}
+    <form action="{{url_for('frenchgen')}}" method="POST" id="myForm" autocomplete="on" enctype="multipart/form-data">
+        <div>
+            <textarea name="rawtext" cols="30" rows="10" placeholder="Enter text or upload a file"></textarea>
+        </div>
+        <input type="submit" value="Generate Keyword" class="button-primary">
+        <input type="reset" value="Refresh text" class="button">
+        <input type="file" name="source-file"  class="button" >
+    </form>
+    <div>
+        <section>
+            <div class="card-body">
+                <div>
+                    <h3>Original text</h3>
+                    <p>{{original_text}}</p>
+                </div>
+                 <h3 class="box-1">Generated keywords</h3>
+                {% for value in keyword %}
+                <li>{{value}}
+                    <a href="https://www.wordreference.com/fren/{{value}}" target="_blank" type="button" class="btn btn primary">Check</a>
+                </li>
+                {% endfor %}
+            </div>
+
+        </section>
+    </div>
+{% endblock %}
